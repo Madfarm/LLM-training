@@ -1,0 +1,5 @@
+"subject","predicate","object"
+"http://webisa.webdatacommons.org/41567184","http://www.w3.org/1999/02/22-rdf-syntax-ns#type","http://www.w3.org/ns/prov#Entity"
+"http://webisa.webdatacommons.org/41567184","http://www.w3.org/ns/prov#value","And the President too is a young man."
+"http://webisa.webdatacommons.org/41567184","http://www.w3.org/ns/prov#wasQuotedFrom","americablog.com"
+"http://webisa.webdatacommons.org/prov/486874759","http://www.w3.org/ns/prov#wasDerivedFrom","http://webisa.webdatacommons.org/41567184"
