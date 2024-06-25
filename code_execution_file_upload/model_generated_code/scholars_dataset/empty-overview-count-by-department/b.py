@@ -24,3 +24,5 @@ for index, row in df.iterrows():
 
 # Print the dictionary
 print(missing_overview_count)
+
+print(df.columns)

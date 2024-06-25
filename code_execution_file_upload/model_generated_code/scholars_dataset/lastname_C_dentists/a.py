@@ -4,16 +4,14 @@ from settings import file_path
 
 import pandas as pd
 
-import pandas as pd
-
 # Load data
 df = pd.read_csv(file_path)
 
-# Filter departments that contain the word "Dentistry"
-dentistry_departments = df[df['Department'].str.contains('Dentistry', case=False)]
+# Filter rows where department contains 'Dentistry' and last name starts with 'C'
+dentists_with_last_name_c = df[df['Department'].str.contains('Dentistry', na=False) & df['Last name'].str.startswith('C', na=False)]
 
-# Filter dentists with last names that start with the letter C
-dentists_with_c = dentistry_departments[dentistry_departments['Last name'].str.startswith('C', na=False)]
+# Find the longest first name
+longest_first_name = dentists_with_last_name_c['First name'].str.len().max()
 
-# Print the results
-print(dentists_with_c)
+# Print the longest first name
+print(longest_first_name)

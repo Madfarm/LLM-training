@@ -7,7 +7,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv(file_path, sep='\t')
+df = pd.read_csv(file_path, skipinitialspace=True)
+df.columns = df.columns.str.strip() 
 
 # Identify outliers in REPRODUCIBILITY
 Q1 = df['REPRODUCIBILITY'].quantile(0.25)
