@@ -2,7 +2,7 @@ import random
 def place_order(products):
     #validation
     for product in products:
-        if not all(key in product for key in ('name', 'price', 'quantity')):
+        if not all(key in product for key in ('name', 'price')):
             return {"Error": "Invalid input data. Each product must have 'name', 'price', and 'quantity'."}
         elif not isinstance(product['price'], (int, float)) or product['price'] <= 0 :
             return {"Error": "Invalid 'price' value. It must be a positive number."}
@@ -29,7 +29,7 @@ def place_order(products):
     
 #Example to test the function    
 products_list = [
-        {'name': 'Pencil', 'price': 5.0, 'quantity': 2},  
+        {'name': 'Pencil', 'price': 5.0},  
         {'name': 'Eraser', 'price': 1.0, 'quantity': 3},  
         {'name': 'Pen', 'price': 7.5, 'quantity': 4}
 ]
